@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">AppAcolhimento</string>
+    <string-array name="idAvaliar">
+        <item>Ruim</item>
+        <item>Regular</item>
+        <item>Bom</item>
+        <item>Excelente</item>
+    </string-array>
 </resources>

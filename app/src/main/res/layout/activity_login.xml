@@ -29,7 +29,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="41dp"
         android:layout_marginEnd="16dp"
-        android:text="Faça seu login com o número da sua matriculá e\nsenha cadastrada."
+        android:text="Faça seu login com o número da sua matrícula e\nsenha cadastrada."
         android:textAlignment="center"
         android:textSize="18sp"
         android:textStyle="bold"
@@ -43,7 +43,7 @@
         android:layout_height="29dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="72dp"
-        android:text="Matricula: "
+        android:text="Matrícula: "
         android:textAlignment="center"
         android:textSize="18sp"
         android:textStyle="bold"
@@ -94,16 +94,34 @@
         app:layout_constraintStart_toEndOf="@+id/textSenha"
         app:layout_constraintTop_toBottomOf="@+id/textSenha" />
 
+    <TextView
+        android:id="@+id/idIncor"
+        android:layout_width="257dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="16dp"
+        android:text=""
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textSenha" />
+
     <Button
         android:id="@+id/idButLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="41dp"
         android:layout_marginEnd="16dp"
         android:text="Login"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.453"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/idSenha" />
+        app:layout_constraintTop_toBottomOf="@+id/idIncor" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,12 +4,12 @@ plugins {
 
 android {
     namespace = "com.example.appacolhimento"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.example.appacolhimento"
-        minSdk = 24
-        targetSdk = 33
+        minSdk = 21
+        targetSdk = 34
         versionCode = 1
         versionName = "1.0"
 
