@@ -1,18 +1,17 @@
 package com.example.appacolhimento;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import com.example.appacolhimento.entities.Cadastro;
 
 
 public class MainActivity extends AppCompatActivity {
-
-Button ButLogin1, ButLogin2, ButAnt, ButPos, ButInic;
-    TextView user, senha,resp, nome, result;
+    Button ButLogin1, ButLogin2, ButAnt, ButPos, ButInic;
+    TextView user, senha,resp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,17 +26,7 @@ Button ButLogin1, ButLogin2, ButAnt, ButPos, ButInic;
             @Override
             public void onClick(View v) {                CarregarTelaLogin();            }
         });
-    }/*
-    @SuppressLint("MissingInflatedId")
-    public void Escrever (View view){
-        setContentView(R.layout.activity_login);
-        nome = findViewById(R.id.idName);
-        result = findViewById(R.id.idTitle);
-                String name = nome.getText().toString();
-                result.setText("Bem-Vindo\n"+name);
-
-    }*/
-
+    }
 
     @SuppressLint("MissingInflatedId")
     public void CarregarTelaLogin() {
@@ -46,21 +35,14 @@ Button ButLogin1, ButLogin2, ButAnt, ButPos, ButInic;
         user = findViewById(R.id.idMat);
         senha = findViewById(R.id.idSenha);
         resp = findViewById(R.id.idIncor);//
-        String [] Funcionarios = new String[] {"1111", "2222", "3333", "4444"};
-       String [] senhasCad = new String[] {"EstouAqui", "FuiAli", "FiqueiFora", "NemParticipei"};
         //
         ButLogin2 = (Button) findViewById(R.id.idButLogin);
         ButLogin2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int j=0;
-                for(int i =0; i < Funcionarios.length;i++){
-                    if(Funcionarios[i].equals(user.getText().toString())){
-                        j = i;
-                    }
-                }
-                if( senhasCad[j].equals(senha.getText().toString())){
-                CarregarTelaLista();}
+                Cadastro usuario = new Cadastro(user.getText().toString(),senha.getText().toString()) ;
+                if(usuario.Acesso()){
+                    CarregarTelaLista();}
                 else{
                     resp.setText("Matricula ou Senha Incorreta");
                 }

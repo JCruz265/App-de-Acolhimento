@@ -6,14 +6,15 @@
     android:layout_height="match_parent"
     tools:context=".LoginActivity">
 
+
     <TextView
         android:id="@+id/idTitle"
-        android:layout_width="188dp"
-        android:layout_height="60dp"
+        android:layout_width="180dp"
+        android:layout_height="42dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="120dp"
+        android:layout_marginTop="80dp"
         android:layout_marginEnd="16dp"
-        android:text="Bem-Vindo\nFuncionario"
+        android:text="Bem-Vindo"
         android:textAlignment="center"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -23,11 +24,27 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
+        android:id="@+id/idFuncionario"
+        android:layout_width="180dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:text=""
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/idTitle" />
+
+    <TextView
         android:id="@+id/textView4"
         android:layout_width="252dp"
         android:layout_height="77dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="41dp"
+        android:layout_marginTop="25dp"
         android:layout_marginEnd="16dp"
         android:text="Faça seu login com o número da sua matrícula e\nsenha cadastrada."
         android:textAlignment="center"
@@ -35,7 +52,7 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/idTitle" />
+        app:layout_constraintTop_toBottomOf="@+id/idFuncionario" />
 
     <TextView
         android:id="@+id/textMat"
